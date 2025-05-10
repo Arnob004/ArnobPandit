@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+/* index.css বা global CSS এ এটুকু যোগ করো */
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
+
+@layer components {
+  .underline-animation {
+    @apply relative inline-block;
+  }
+  .underline-animation::after {
+    content: "";
+    @apply absolute w-full h-[2px] left-0 bottom-0 scale-x-0 origin-right transition-transform duration-300;
+  }
+
+  .underline-animation-black::after {
+    @apply bg-black;
+  }
+  .underline-animation-white::after {
+    @apply bg-white;
+  }
+  .underline-animation:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
