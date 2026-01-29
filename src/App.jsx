@@ -35,13 +35,13 @@ const App = () => {
   }, []);
   return (
     <>
-      <div className={`relative w-full duration-300 ${DarkMode ? "bg-[#f3e8e0]" : "bg-[#0f172a]"} bg min-h-screen`}>
+      <div className={`relative md:w-full duration-300 ${DarkMode ? "bg-[#f3e8e0]" : "bg-[#0f172a]"} min-h-screen`}>
         <CostomCursor />
         {/* Navigation and Menu */}
         <Navber DarkMode={DarkMode} />
         <AnimatePresence>{isActive && <MenuBox DarkMode={DarkMode} scroll={scrollInstance} />}</AnimatePresence>
         {/* Main Scrollable Content */}
-        <div className="w-full max-w-7xl sm:px-36 px-6 pt-36 sm:pt-36 relative">
+        <div className="w-full overflow-hidden  max-w-7xl sm:px-36 px-6 pt-36 sm:pt-36 relative">
           {/* Animated Circles */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -62,7 +62,7 @@ const App = () => {
           z-0 pointer-events-none top-20 sm:top-40 left-[-100px] sm:left-[200px]
           ${DarkMode ? "border-gray-500" : "border-white"}`}
           />
-
+           
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{
@@ -86,7 +86,7 @@ const App = () => {
           <Description DarkMode={DarkMode} />
           <Project DarkMode={DarkMode} />
           <Skills DarkMode={DarkMode} />
-          {/* <Experience DarkMode={DarkMode} /> */}
+          <Experience DarkMode={DarkMode} />
           <Contact DarkMode={DarkMode} />
         </div>
       </div>

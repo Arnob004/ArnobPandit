@@ -36,7 +36,7 @@ const Description = ({ DarkMode }) => {
                                 },
                             },
                         }}
-                        className={`inline-block text-[28px] sm:text-5xl font-inter font-medium ${DarkMode ? "text-gray-900" : "text-white"}`}
+                        className={`inline-block text-[28px] sm:text-3xl font-inter font-medium ${DarkMode ? "text-gray-900" : "text-white"}`}
                     >
                         {char === " " ? "\u00A0" : char}
                     </motion.span>
