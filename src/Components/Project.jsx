@@ -28,6 +28,18 @@ const Project = ({ DarkMode }) => {
       projectLink: "https://fastee.vercel.app/",
       bgColor: "bg-white",
     },
+    {
+      imgSrc:
+        "https://s.tmimgcdn.com/scr/1200x627/203100/marketkit-multipurpose-ecommerce-html-website-template_203166-original.jpg",
+      projectLink: "https://kuchdekho.vercel.app",
+      bgColor: "bg-white",
+    },
+    {
+      imgSrc:
+        "https://s.tmimgcdn.com/scr/1200x627/203100/marketkit-multipurpose-ecommerce-html-website-template_203166-original.jpg",
+      projectLink: "https://fifly.vercel.app",
+      bgColor: "bg-white",
+    },
   ];
 
   return (
